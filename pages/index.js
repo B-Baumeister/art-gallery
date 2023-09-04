@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import Spotlight from "../components/Spotlight";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -11,5 +12,18 @@ export default function OverviewPage() {
     return "Loading ...";
   }
 
-  return <div></div>;
+  const length = data.length;
+  console.log(length);
+
+  function getRandomPiece(length) {
+    return Math.floor(Math.random() * length);
+  }
+  return (
+    <div>
+      <Spotlight
+        image={data[getRandomPiece(length)].imageSource}
+        artist={data[getRandomPiece(length)].artist}
+      />
+    </div>
+  );
 }
