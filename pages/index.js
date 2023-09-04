@@ -11,5 +11,11 @@ export default function OverviewPage() {
     return "Loading ...";
   }
 
+  const length = data.length;
+  console.log(length);
+
+  function getRandomPiece(length) {
+    return Math.floor(Math.random() * length);
+  }
   return <div></div>;
 }
