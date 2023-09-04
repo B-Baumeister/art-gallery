@@ -1,4 +1,5 @@
 import GlobalStyle from "../styles";
+import Layout from "@/components/Layout";
 import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Component {...pageProps} pieces={isLoading || !data ? [] : data} />
+      <Layout />
     </>
   );
 }
