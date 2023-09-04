@@ -1,17 +1,5 @@
-import ArtPiecePreview from "@/components/ArtPiecePreview";
+import ArtPieces from "@/components/ArtPieces";
 
-export default function ArtPieces({ pieces }) {
-  return (
-    <ul>
-      {pieces.map((piece) => (
-        <>
-          <ArtPiecePreview
-            image={piece.imageSource}
-            title={piece.name}
-            artist={piece.artist}
-          />
-        </>
-      ))}
-    </ul>
-  );
+export default function ArtPiecesPage({ pieces }) {
+  return <ArtPieces pieces={pieces} />;
 }

@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 export default function ArtPiecePreview({ image, title, artist }) {
-  <li>
-    <Image scr={image} alt={title} />
-    <p>
-      ”{title}” by {artist}
-    </p>
-  </li>;
+  return (
+    <li>
+      <Image src={image} alt={artist} width={`${300}`} height={`${300}`} />
+      <p>
+        ”{title}” by {artist}
+      </p>
+    </li>
+  );
 }
