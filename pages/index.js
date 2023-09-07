@@ -1,6 +1,6 @@
 import Spotlight from "../components/Spotlight";
 
-export default function SpotlightPage({ pieces }) {
+export default function SpotlightPage({ pieces, artPiecesInfo }) {
   function getRandomPiece() {
     return Math.floor(Math.random() * pieces.length);
   }
