@@ -4,20 +4,21 @@ import { useRouter } from "next/router";
 export default function ArtPieceDetailsPage({ pieces }) {
   const router = useRouter();
   const { slug } = router.query;
-
+  console.log(pieces);
   const selectedArtPiece = pieces.find((piece) => piece.slug === slug);
 
+  if (!selectedArtPiece) {
+    return null;
+  }
+
   return (
-    <>
-      <ArtPieceDetails
-        image={selectedArtPiece.imageSource}
-        title={selectedArtPiece.title}
-        artist={selectedArtPiece.artist}
-        year={selectedArtPiece.year}
-        genre={selectedArtPiece.genre}
-      />
-      ;
-    </>
+    <ArtPieceDetails
+      image={selectedArtPiece.imageSource}
+      title={selectedArtPiece.title}
+      artist={selectedArtPiece.artist}
+      year={selectedArtPiece.year}
+      genre={selectedArtPiece.genre}
+    />
   );
 }
 
