@@ -13,6 +13,9 @@ export default function App({ Component, pageProps }) {
 
   const [artPiecesInfo, setArtPiecesInfo] = useState([]);
 
+  const { slug, isFavorite } = artPieceInfo;
+  console.log(slug);
+
   return (
     <>
       <GlobalStyle />
