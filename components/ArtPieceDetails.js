@@ -1,16 +1,20 @@
 import Image from "next/image";
 
+// Create the component ArtPieceDetails
+//  ArtPieceDetails props: image, title, artist, year, genre
+
 export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   return (
-    <ul>
-      {pieces.map(({ id, image, title, artist, year, genre }) => (
-        <li key={id}>
-          <Image src={image} alt={artist} width={`${300}`} height={`${300}`} />
-          <p>
-            ”{title}” by {artist}, Year: {year}, Genre: {genre},
-          </p>
+    <>
+      <Image src={image} alt={artist} width={`${300}`} height={`${300}`} />
+
+      <ul>
+        <li>
+          {title} by: {artist}
         </li>
-      ))}
-    </ul>
+        <li>Year: {year}</li>
+        <li> Genre: {genre}</li>
+      </ul>
+    </>
   );
 }
