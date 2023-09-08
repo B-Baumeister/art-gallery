@@ -13,6 +13,7 @@ export default function ArtPieceDetailsPage({ pieces }) {
 
   return (
     <ArtPieceDetails
+      onBack={() => router.back()}
       image={selectedArtPiece.imageSource}
       title={selectedArtPiece.title}
       artist={selectedArtPiece.artist}
