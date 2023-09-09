@@ -16,6 +16,7 @@ export default function ArtPiecePreview({
       <FavoriteButton
         isFavorite={isFavorite}
         onToggleFavorite={onToggleFavorite}
+        positionAbsolute={true}
       />
       <Link href={`/art-pieces/${slug}`}>
         <Image src={image} alt={artist} width={`${300}`} height={`${300}`} />
