@@ -20,6 +20,7 @@ export default function ArtPieceDetails({
       <FavoriteButton
         isFavorite={isFavorite}
         onToggleFavorite={onToggleFavorite}
+        positionAbsolute={true}
       />
       <Image src={image} alt={artist} width={`${300}`} height={`${300}`} />
 
