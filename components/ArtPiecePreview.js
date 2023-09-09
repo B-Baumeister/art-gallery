@@ -1,4 +1,4 @@
-import FavoriteButton from "./FavoriteButton";
+import FavoriteButton from "@/components/FavoriteButton";
 import Image from "next/image";
 import Link from "next/link";
 
