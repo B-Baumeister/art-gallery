@@ -1,3 +1,4 @@
+import FavoriteButton from "./FavoriteButton";
 import Image from "next/image";
 
 // Create the component ArtPieceDetails
@@ -16,6 +17,10 @@ export default function ArtPieceDetails({
       <button type="button" onClick={onBack} aria-label="navigate back">
         ←
       </button>
+      <FavoriteButton
+        isFavorite={isFavorite}
+        onToggleFavorite={onToggleFavorite}
+      />
       <Image src={image} alt={artist} width={`${300}`} height={`${300}`} />
 
       <ul>
