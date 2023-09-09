@@ -1,7 +1,11 @@
 import ArtPieceDetails from "@/components/ArtPieceDetails";
 import { useRouter } from "next/router";
 
-export default function ArtPieceDetailsPage({ pieces }) {
+export default function ArtPieceDetailsPage({
+  pieces,
+  artPieceInfo,
+  onToggleFavorite,
+}) {
   const router = useRouter();
   const { slug } = router.query;
   console.log(pieces);
@@ -20,7 +24,7 @@ export default function ArtPieceDetailsPage({ pieces }) {
       year={selectedArtPiece.year}
       genre={selectedArtPiece.genre}
       isFavorite={
-        artPieceinfo.find((piece) => piece.slug === selectedArtPiece.slug)
+        artPieceInfo.find((piece) => piece.slug === selectedArtPiece.slug)
           ?.isFavorite
       }
       onToggleFavorite={() => onToggleFavorite(selectedArtPiece.slug)}
