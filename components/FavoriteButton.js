@@ -1,5 +1,5 @@
-import Heart from "/assets/heart.svg";
 import Image from "next/image";
+import styled from "styled-components";
 
 const Button = styled.button`
   position: ${({ $positionAbsolute }) =>
@@ -29,8 +29,8 @@ export default function FavoriteButton({
       type="button"
       $isFavorite={isFavorite}
       onClick={onToggleFavorite}
-      $positionAbsolute={positionAbsolute}
       aria-label={isFavorite ? "like" : "unlike"}
+      $positionAbsolute={positionAbsolute}
     >
       <Image src="/assets/heart.svg" width={30} height={30} alt="" />
     </Button>
