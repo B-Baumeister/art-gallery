@@ -19,6 +19,11 @@ export default function ArtPieceDetailsPage({ pieces }) {
       artist={selectedArtPiece.artist}
       year={selectedArtPiece.year}
       genre={selectedArtPiece.genre}
+      isFavorite={
+        artPieceinfo.find((piece) => piece.slug === selectedArtPiece.slug)
+          ?.isFavorite
+      }
+      onToggleFavorite={() => onToggleFavorite(selectedArtPiece.slug)}
     />
   );
 }
